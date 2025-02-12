@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Тренировочный график</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Силовой тренинг от Джасура</h1>
+<p>Введите свои ПМ для приседаний, тяги и жима, и программа автоматически рассчитает веса, подходы, повторения и общий тоннаж для каждой тренировки.</p>
+
+<form>
+  <label for="pm_squats">ПМ Приседания (кг): </label>
+  <input type="number" id="pm_squats" value="100"><br><br>
+
+  <label for="pm_deadlift">ПМ Тяга в наклоне (кг): </label>
+  <input type="number" id="pm_deadlift" value="80"><br><br>
+
+  <label for="pm_bench">ПМ Жим лёжа (кг): </label>
+  <input type="number" id="pm_bench" value="60"><br><br>
+
+  <label for="exercise_type">Выберите упражнение:</label>
+  <select id="exercise_type">
+    <option value="squats">Приседания</option>
+    <option value="deadlift">Тяга в наклоне</option>
+    <option value="bench">Жим лёжа</option>
+  </select><br><br>
+
+  <button type="button" onclick="updateGraph()">Обновить график</button>
+</form>
+
+<table id="graph">
+  <thead>
+    <tr>
+      <th>Неделя</th>
+      <th>День</th>
+      <th>Упражнение</th>
+      <th>Процент от ПМ</th>
+      <th>Вес (кг)</th>
+      <th>Подходы x Повторения</th>
+      <th>Общий тоннаж (кг)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Данные генерируются через JavaScript -->
+  </tbody>
+</table>
+
+<script src="script.js"></script>
+</body>
+</html>
